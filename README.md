@@ -27,7 +27,7 @@ Follow [Godoc](https://godoc.org/github.com/tiborvass/xhyve-bindings).
 # Roadmap
 
 * **fork-exec**: Go program should be able to run multiple xhyve instances. I suggest we use
-the [reexec package](https://github.com/docker/docker/pkg/reexec).
+the [reexec package](https://godoc.org/github.com/docker/docker/pkg/reexec).
 * **cross-compiling**: We should be able to compile it from Linux. I was thinking of using
 [xgo](https://github.com/karalabe/xgo) but any other solution that works should be good.
 * **management**: Start, Stop and Kill fork-exec'd xhyve instance.

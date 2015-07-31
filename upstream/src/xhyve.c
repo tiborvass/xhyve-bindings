@@ -72,6 +72,10 @@
 
 #define MB (1024UL * 1024)
 
+#ifndef VERSION
+#define VERSION "dev"
+#endif
+
 typedef int (*vmexit_handler_t)(struct vm_exit *, int *vcpu);
 extern int vmexit_task_switch(struct vm_exit *, int *vcpu);
 
@@ -774,7 +778,7 @@ fail:
 }
 
 int
-main(int argc, char *argv[])
+MAIN(int argc, char *argv[])
 {
 	int c, error, gdb_port, bvmcons, fw;
 	int dump_guest_memory, max_vcpus, mptgen;

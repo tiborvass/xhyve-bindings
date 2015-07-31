@@ -78,3 +78,9 @@ void vcpu_add(int fromcpu, int newcpu, uint64_t rip);
 int fbsdrun_vmexit_on_hlt(void);
 int fbsdrun_vmexit_on_pause(void);
 int fbsdrun_virtio_msix(void);
+
+#ifdef MAIN
+int MAIN(int, char*[]);
+#else
+#define MAIN main
+#endif

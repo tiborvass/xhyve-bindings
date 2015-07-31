@@ -50,4 +50,5 @@ C files can have the same name.
 
 # License
 
-MIT
+The bindings are under MIT License.
+For xhyve itself, read [https://github.com/mist64/xhyve](https://github.com/mist64/xhyve).

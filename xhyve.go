@@ -16,7 +16,11 @@ import (
 */
 import "C"
 
-func Spawn(args []string) error {
+// Exec will call xhyve's main function passing `xhyve`
+// as `argv[0]` and `args` for the rest.
+//
+// Example: Exec("-v") will set argc to 2, and argv to ["xhyve", "-v"].
+func Exec(args ...string) error {
 	args = append([]string{"xhyve"}, args...)
 
 	var x *C.char

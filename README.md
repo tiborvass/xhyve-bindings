@@ -18,6 +18,8 @@ $ cd $GOPATH/src/github.com/tiborvass/xhyve-bindings
 $ go run main/main.go upstream/test/vmlinuz upstream/test/initrd.gz
 ```
 
+Once in the VM, type `sudo halt` to quit it.
+
 # Documentation
 
 Follow [Godoc](https://godoc.org/github.com/tiborvass/xhyve-bindings).

@@ -1,9 +1,17 @@
-.PHONY: clean all
+.PHONY: all clean
 
-all:
-	./generate.sh
-	go install
+all: build
+
+clean-patch:
+	$(RM) -f *.c
+	@git apply -R upstream.patch 2>/dev/null || true
 
 clean:
-	@rm -f *.c
-	@git apply -R upstream.patch 2>/dev/null || true
+	$(RM) ./main/goxhyve
+	$(RM) $(GOPATH)/bin/goxhyve
+
+build: clean
+	go build -o ./main/goxhyve ./main
+
+install: build
+	cp ./main/goxhyve $(GOPATH)/bin/
